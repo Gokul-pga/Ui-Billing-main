@@ -5,7 +5,7 @@ const productSchema = new Schema({
   productName: { type: String, required: true },
   image: { type: String, }, // Assuming image is stored as a base64 encoded string
   sellingPrice: { type: Number, required: true },
-  purchasePrice: { type: Number, required: true },
+  purchasePrice: { type: Number, },
   creator: { type: String,  required: true },
   status: { type: Boolean, default: true },
   creationTime: { type: Date, default: Date.now },
