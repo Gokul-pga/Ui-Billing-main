@@ -96,9 +96,9 @@ exports.customerCreate = async (req, res) => {
       }
   
       // Check if the customer has any pending amount
-      if (parseFloat(customer.pendingAmount) > 0) {
-        return res.status(400).send({ status: "* Cannot delete customer with pending amount" });
-      }
+      // if (parseFloat(customer.pendingAmount) > 0) {
+      //   return res.status(400).send({ status: "* Cannot delete customer with pending amount" });
+      // }
   
       // Delete the customer if no pending amount
       await CustomerDetails.deleteOne({ _id: id });
